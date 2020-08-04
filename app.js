@@ -9,6 +9,8 @@ var bodyParser = require("body-parser");
 var classRoutes = require("./routes/class");
 app.use("/", classRoutes);
 
+var authRoutes = require("./routes/auth");
+app.use("/", authRoutes);
 mongoose.connect(
    "mongodb+srv://luvdhimaan:lovedhimaan7@cluster0.5fzxh.mongodb.net/chemistryclasses?retryWrites=true&w=majority",
    { useNewUrlParser: true, useCreateIndex: true }

@@ -77,4 +77,8 @@ router.get("/classXII/:id", function (req, res) {
       }
    });
 });
+router.get("/syllabus", function (req, res) {
+   res.render("class/syllabus");
+});
+
 module.exports = router;
