@@ -1,133 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-         rel="stylesheet"
-         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      />
-      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Electrolize&family=Oleo+Script&family=Pacifico&family=Playball&family=Righteous&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet/text" href="/stylesheets/chemistry.css">
-      <title>Chemistry classes</title>
-   <style>.fa-flask {
-      font-size: 100px;
-   }
-   body {
-      font-family: "Playball", cursive;
-      font-size: 30px;
-   }
-   footer {
-      color: white;
-   }
-   h3 {
-      font-family: "Anton", sans-serif;
-   }
-   h2 {
-      font-family: "Righteous", cursive;
-   }
-   b {
-      font-family: "Pacifico", cursive;
-      color: black;
-   }
-   .lcture {
-      padding: 10px;
-   }
-  
-   .white {
-      background-color: white;
-   }
-   a {
-      color: white;
-   }
-   #nv {
-      background-color: black;
-      padding: 2rem;
-      font-size: 1.3rem;
-   }
-   .col {
-      padding: 5rem;
-   }
-   .row {
-      text-align: center;
-   }
-   .col-md-4 {
-      background-color: black;
-      padding: 5rem 5rem;
-      margin: 10px;
-      border-radius: 0.5em;
-   }
-   .size {
-      background-color: black;
-      padding: 5rem;
-   }
-   
-   #footer {
-      font-size: 20px;
-      background-color: black;
-      padding: 2rem;
-   }
-   .display-2{
-      padding:30px;
-      background-color: white;
-      color: black;
-      
-   }
-   .display-3{
-      padding:30px;
-      background-color: white;
-      color: black;
 
-   }
-   .container{
-      background-color: black;
-color: white;
-padding: 0; 
-   }
-   .card{
-      margin-left:10px;
-      margin-top: 5px;
-      background-color: black;
-   }
-   .whit{
-      background-color: white;
-      padding: 50px;
-      margin: 0;
-   } .black {
-      background-color: black;
-      padding: 50px;
-    
-   }
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Electrolize&family=Oleo+Script&family=Pacifico&family=Playball&family=Righteous&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet/text" href="/stylesheets/chemistry.css">
+   <title>Chemistry classes</title>
+   <style>
+      .fa-flask {
+         font-size: 100px;
+      }
+
+      body {
+         font-family: "Playball", cursive;
+         font-size: 30px;
+      }
+
+      footer {
+         color: white;
+      }
+
+      h3 {
+         font-family: "Anton", sans-serif;
+         font-size: 25px;
+      }
+
+      h2 {
+         font-family: "Righteous", cursive;
+      }
+
+      b {
+         font-family: "Pacifico", cursive;
+         color: black;
+      }
+
+      .lcture {
+         padding: 10px;
+      }
+
+      .white {
+         background-color: white;
+      }
+
+      a {
+         color: white;
+      }
+
+      #nv {
+         background-color: black;
+         padding: 2rem;
+         font-size: 1.3rem;
+      }
+
+      .col {
+         padding: 5rem;
+      }
+
+      .row {
+         text-align: center;
+      }
+
+      .col-md-4 {
+         background-color: black;
+         padding: 5rem 5rem;
+         margin: 10px;
+         border-radius: 0.5em;
+      }
+
+      .size {
+         background-color: black;
+         padding: 5rem;
+      }
+
+      #footer {
+         font-size: 20px;
+         background-color: black;
+         padding: 2rem;
+      }
+
+      .display-2 {
+         padding: 30px;
+         background-color: white;
+         color: black;
+         font-size: 50px;
+      }
+
+      i {
+         font-size: 20px;
+      }
+
+      .display-3 {
+         padding: 30px;
+         background-color: white;
+         color: black;
+         font-size: 50px;
+      }
+
+      .container {
+         background-color: black;
+         color: white;
+         padding: 0;
+      }
+
+      .card {
+         margin-left: 10px;
+         margin-top: 5px;
+         background-color: black;
+      }
+
+      .whit {
+         background-color: white;
+         padding: 50px;
+         margin: 0;
+      }
+
+      .black {
+         background-color: black;
+         padding: 50px;
+
+      }
    </style>
-   </head>
-   <body>
-      <nav id="nv" class="navbar navbar-dark">
-         <a class="navbar-brand" href="/"><h2>Chemistry classes  <i class="fa fa-university" aria-hidden="true"></i></h2></a>
-        
-         <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
-            <div class="navbar-nav">
-               <a class="nav-item nav-link" href="/"
-                  >Home <span class="sr-only">(current)</span></a
-               >
-            </div>
-           
-            <div class="navbar-nav">
-               <a class="nav-item nav-link" href="/syllabus">Syllabus</a>
-            </div>
-            <div class="navbar-nav">
-               <a class="nav-item nav-link" href="/login">Log In</a>
-            </div>
-       
-           
-            <div class="navbar-nav">
-               <a class="nav-item nav-link" href="/signup">Sign Up</a>
-            </div>
-            <div class="navbar-nav">
-               <a class="nav-item nav-link" href="/logout">Log Out</a>
-            </div>
-     
-         </div>
-      </nav>
-      
-  
+</head>
+
+<body>
+   <nav id="nv" class="navbar navbar-dark">
+      <a class="navbar-brand" href="/">
+         <h2>Chemistry classes <i class="fa fa-university" aria-hidden="true"></i></h2>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
+      <div class="navbar-nav">
+         <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </div>
+
+      <div class="navbar-nav">
+         <a class="nav-item nav-link" href="/syllabus">Syllabus</a>
+      </div>
+      <div class="navbar-nav">
+         <a class="nav-item nav-link" href="/login">Log In</a>
+      </div>
+
+
+      <div class="navbar-nav">
+         <a class="nav-item nav-link" href="/signup">Sign Up</a>
+      </div>
+      <div class="navbar-nav">
+         <a class="nav-item nav-link" href="/logout">Log Out</a>
+      </div>
+
+      </div>
+   </nav>
