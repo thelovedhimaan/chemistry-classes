@@ -1,0 +1,25 @@
+<%-include("../partials/header")%>
+
+<div class="container">
+   <h1 class="display-2">Class X Lectures</h1>
+   <br />
+   <div class="row lcture">
+      <% lecture.forEach(function(lectures){%>
+      <div class="col-md-3 lcture">
+         <div class="card" style="width: 18rem;">
+            <img src="<%= lectures.image%>" class="card-img-top" alt="..." />
+         </div>
+      </div>
+      <div class="col-md-9 lcture">
+         <h3><%= lectures.topic%></h3>
+
+         <a class="btn btn-info" href="/classX/<%=lectures._id%>"
+            >play lecture</a
+         >
+      </div>
+      <%})%>
+   </div>
+   <br />
+   <div class="whit" class="row"></div>
+   <%-include("../partials/footer")%>
+</div>

@@ -1,0 +1,42 @@
+body {
+   font-size: 30px;
+}
+a {
+   color: white;
+}
+#nv {
+   background-color: black;
+   padding: 2rem;
+   font-size: 1.3rem;
+}
+.col {
+   padding: 5rem;
+}
+
+.row {
+   text-align: center;
+   color: white;
+}
+.col-md-4 {
+   background-color: black;
+   padding: 5rem 5rem;
+   margin: 10px;
+   border-radius: 0.5em;
+}
+.size {
+   background-color: black;
+   padding: 5rem;
+}
+
+body {
+   background-size: cover;
+
+   background-repeat: no-repeat;
+   background-image: url(https://images.unsplash.com/photo-1562411053-c9ac630a5934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
+}
+#footer {
+   font-size: 20px;
+   background-color: black;
+   padding: 2rem;
+}
+/**********************************************************************************************/

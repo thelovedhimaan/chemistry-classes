@@ -1,0 +1,30 @@
+<%-include("partials/header")%>
+<div class="container">
+   <div class="row">
+      <div class=" justify-content-center">
+         <h2 class="display-3">
+            <%= lecture.topic%>
+         </h2>
+      </div>
+   </div>
+   <div class="black"class="row ">
+   <div class="row justify-content-center">
+      <div class="col-md-8">
+         <iframe
+            width="720"
+            height="500"
+            src="https://www.youtube.com/embed/<%= lecture.url%>?autoplay=1"
+            allowfullscreen
+         >
+         </iframe>
+      </div>
+   </div><br>
+   <div class="row justify-content-center">
+      <p><h2>Topics</h2>
+         <h3><i><%= lecture.description%></i></h3></p>
+      
+   </div></div>
+</div>  <div class="whit" class="row"></div>
+<br />
+
+<%-include("partials/footer")%>
