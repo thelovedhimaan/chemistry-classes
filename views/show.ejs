@@ -1,26 +1,55 @@
 <%-include("partials/header")%>
 <div class="container">
    <div class="row">
-      <div class=" justify-content-center">
+      <div class="justify-content-center">
          <h2 class="display-3">
             <%= lecture.topic%>
          </h2>
       </div>
    </div>
-   <div class="black" class="row ">
+   <div class="black" class="row">
       <div class="row justify-content-center">
          <div class="col-md-8">
-            <iframe width="620" height="400" src="https://www.youtube.com/embed/<%= lecture.url%>?autoplay=1"
-               allowfullscreen>
+            <iframe
+               width="620"
+               height="400"
+               src="https://www.youtube.com/embed/<%= lecture.url%>?autoplay=1"
+               allowfullscreen
+            >
             </iframe>
          </div>
-      </div><br>
+      </div>
+      <br />
       <div class="row justify-content-center">
-         <p>
          <h2>Topics</h2>
+      </div>
+      <div class="row justify-content-center">
          <h3><i><%= lecture.description%></i></h3>
-         </p>
+      </div>
 
+      <div class="row justify-content-left">
+         <a
+            class="btn btn-light btn-lg"
+            href="/<%=lecture.class%>/<%=lecture._id%>/comment/new"
+            >Add Comment</a
+         >
+      </div>
+      <% lecture.commentss.forEach(function(comment){ %>
+      <div class="row justify-content-left">
+         <h3><%= comment.username%></h3>
+      </div>
+      <div class="row justify-content-left">
+         <p><%= comment.comments%></p>
+      </div>
+
+      <% })%>
+
+      <div class="row justify-content-right">
+         <a
+            class="btn btn-danger btn-lg"
+            href="/<%=lecture.class%>/<%=lecture._id%>/comment/new"
+            >Delete Comment</a
+         >
       </div>
    </div>
 </div>

@@ -5,5 +5,11 @@ var dataSchema = new mongoose.Schema({
    image: String,
    url: String,
    description: String,
+   commentss: [
+      {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "comment",
+      },
+   ],
 });
 module.exports = mongoose.model("lecture", dataSchema);

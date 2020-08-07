@@ -1,0 +1,31 @@
+<%-include("../partials/header")%>
+<div class="container">
+    <h2 class="display-3">New Video Form</h2>
+    <div class="black" class="row"></div>
+    <form action="/" method="POST">
+        <div class="row justify-content-center">
+            <input name="adding[class]" type="text" placeholder="Class" />
+        </div><br>
+        <div class="row justify-content-center">
+            <input name="adding[topic]" type="text" placeholder="Topic" />
+        </div><br>
+        <div class="row justify-content-center">
+            <input name="adding[image]" type="text" placeholder="Image Url" />
+        </div><br>
+        <div class="row justify-content-center">
+            <input name="adding[url]" type="text" placeholder="youtube Video Id" />
+        </div><br>
+        <div class="row justify-content-center">
+            <textarea name="adding[description]" id="" cols=" 30" rows="4" placeholder="Description"></textarea>
+        </div><br>
+        <div class="row justify-content-center">
+            <button>Add New Lecture</button>
+        </div><br>
+</div>
+<div class=" whit" class="row"></div>
+
+
+
+</form>
+
+<%-include("../partials/footer")%>

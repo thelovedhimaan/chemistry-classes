@@ -1,9 +1,10 @@
 <%-include("../partials/header")%>
 
 <div class="container">
-   <h1 class="display-2">Class XI Lectures</h1>
+   <h1 class="display-2"><%= lecture.class%> Lectures</h1>
    <br />
    <div class="row lcture">
+
       <% lecture.forEach(function(lectures){%>
       <div class="col-md-3 lcture">
          <div class="card" style="width: 18rem;">
@@ -13,9 +14,7 @@
       <div class="col-md-9 lcture">
          <h3><%= lectures.topic%></h3>
 
-         <a class="btn btn-info" href="/classXI/<%=lectures._id%>"
-            >play lecture</a
-         >
+         <a class="btn btn-info" href="/<%= lectures.class%>/<%=lectures._id%>">play lecture</a>
       </div>
       <%})%>
    </div>

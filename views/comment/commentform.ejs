@@ -1,0 +1,21 @@
+<%-include("../partials/header")%>
+<div class="container">
+    <h2 class="display-3">Comment Form</h2>
+    <div class="black" class="row"></div>
+    <form action="/<%=lecture.class%>/<%=lecture._id%>/comment" method="POST">
+        <div class="row justify-content-center">
+            <input name="comm[username]" type="text" placeholder="Username" />
+        </div><br>
+        <div class="row justify-content-center">
+            <input name="comm[comments]" type=" text" placeholder="Comment" />
+</div><br>
+<div class="row justify-content-center"">
+            <button>Add Comment</button>
+          </div><br>
+      </div> <div class=" whit" class="row"></div>
+
+
+
+</form>
+
+<%-include("../partials/footer")%>
