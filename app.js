@@ -20,7 +20,7 @@ const commentRoutes = require('./routes/comment');
 app.use('/', commentRoutes);
 
 mongoose.connect(
-   'mongodb://localhost/chemistry_classes',
+   'mongodb+srv://luvdhimaan:lovedhimaan7@cluster0.5fzxh.mongodb.net/chemistryclasses?retryWrites=true&w=majority',
 
    { useNewUrlParser: true, useUnifiedTopology: true }
 );
