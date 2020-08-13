@@ -1,5 +1,5 @@
-var mongoose = require("mongoose");
-var dataSchema = new mongoose.Schema({
+const mongoose = require('mongoose');
+const dataSchema = new mongoose.Schema({
    class: String,
    topic: String,
    image: String,
@@ -8,8 +8,8 @@ var dataSchema = new mongoose.Schema({
    commentss: [
       {
          type: mongoose.Schema.Types.ObjectId,
-         ref: "comment",
+         ref: 'comment',
       },
    ],
 });
-module.exports = mongoose.model("lecture", dataSchema);
+module.exports = mongoose.model('lecture', dataSchema);

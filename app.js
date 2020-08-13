@@ -1,35 +1,36 @@
-var port = process.env.PORT || 3000;
-var express = require("express");
-var app = express();
-var mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-var lecture = require("./models/lectures");
-var comment = require("./models/comment");
-var seed = require("./seeds");
+const port = process.env.PORT || 3000;
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const lecture = require('./models/lectures');
+const comment = require('./models/comment');
+const seed = require('./seeds');
 app.use(
    bodyParser.urlencoded({
       extended: true,
    })
 );
+const authRoutes = require('./routes/auth');
+app.use('/', authRoutes);
+const classRoutes = require('./routes/class');
+app.use('/', classRoutes);
 
-var classRoutes = require("./routes/class");
-app.use("/", classRoutes);
-var commentRoutes = require("./routes/comment");
-app.use("/", commentRoutes);
+const commentRoutes = require('./routes/comment');
+app.use('/', commentRoutes);
 
-var authRoutes = require("./routes/auth");
-app.use("/", authRoutes);
-mongoose.connect("mongodb://localhost/chemistry_classes", {
-   useNewUrlParser: true,
-   useCreateIndex: true,
+mongoose.connect(
+   'mongodb://localhost/chemistry_classes',
+
+   { useNewUrlParser: true, useUnifiedTopology: true }
+);
+
+app.set('view engine', 'ejs');
+
+app.get('/', function (req, res) {
+   res.render('homepage');
 });
 
-app.set("view engine", "ejs");
-
-app.get("/", function (req, res) {
-   res.render("homepage");
-});
-
-app.listen(port, function () {
-   console.log("running");
+app.listen(port, () => {
+   console.log('running');
 });
