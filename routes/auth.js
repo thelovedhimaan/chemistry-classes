@@ -2,22 +2,17 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/auth');
 
-router.get('/signup', (req, res) => {
+//signup routes
+router.get('/regis', (req, res) => {
    res.render('form/signup');
 });
+
+router.post('/register', (req, res) => {});
+
+//login routes
 router.get('/login', (req, res) => {
    res.render('form/login');
 });
-router.post('/register', async (req, res) => {
-   const user = new User({
-      name: req.body.name,
-      password: req.body.password,
-   });
-   try {
-      const savedUser = await user.save();
-      res.send(savedUser);
-   } catch (err) {
-      res.status(400).send(err);
-   }
-});
+
+router.post('/login', (req, res) => {});
 module.exports = router;

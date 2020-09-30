@@ -6,11 +6,13 @@ const bodyParser = require('body-parser');
 const lecture = require('./models/lectures');
 const comment = require('./models/comment');
 const seed = require('./seeds');
+
 app.use(
    bodyParser.urlencoded({
       extended: true,
    })
 );
+
 const authRoutes = require('./routes/auth');
 app.use('/', authRoutes);
 const classRoutes = require('./routes/class');
